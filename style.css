@@ -1,0 +1,313 @@
+:root{
+/* ### Primary */
+
+--Soft-red: hsl(7, 99%, 70%);
+--Yellow : hsl(51, 100%, 49%);
+--Dark-desaturated-cyan: hsl(167, 40%, 24%);
+--Dark-blue: hsl(198, 62%, 26%);
+--Dark-moderate-cyan: hsl(168, 50%, 72%);
+
+/* ### Neutral */
+
+--Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+--Very-dark-grayish-blue: hsl(213, 9%, 39%);
+--Dark-grayish-blue: hsl(232, 10%, 55%);
+--Grayish-blue: hsl(210, 4%, 67%);
+--White: hsl(0, 0%, 100%);
+}
+*,
+.body, html{
+    margin: 0;
+    padding: 0;
+    text-align:center;
+    font-family: 'Barlow', sans-serif;;
+}
+/* =========== HEADER BELOW =========== */
+header{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-image: url(images/desktop/image-header.jpg);
+}
+
+#nav{
+     display: flex;
+     flex-direction: row;
+     gap: 20px;
+     padding-right: 20px ;
+}
+
+li{
+    list-style: none;
+    cursor: pointer;
+}
+
+
+/* ================ HEADER ABOVE =============== */
+/*  IMAGES PROPERTIES */
+
+.img-mobile, #hamburger{
+    display: none;
+}
+.h1-box{
+    height: 100vh;
+    flex-basis: 100vw;
+    background-image: url(images/desktop/image-header.jpg) ;
+    background-attachment: scroll;
+    background-size: 100vw;
+}
+.arrow{
+    max-height: 25%;
+    width: auto;
+    margin-top: 50px;
+}
+.graphic-design{
+    color: var(--Dark-desaturated-cyan);
+    background-image: url(images/desktop/image-graphic-design.jpg);
+    background-attachment: scroll;
+    background-size: 50vw;
+    background-position: center bottom;
+}
+.photography{
+    color: var(--Very-dark-desaturated-blue);
+    background-image: url(images/desktop/image-photography.jpg);
+    background-attachment: scroll;
+    background-size: 50vw;
+    background-position: center bottom;
+}
+.avatar{
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+}
+
+/* TEXT PROPERTIES */
+h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: white;
+    padding-top: 100px;
+    letter-spacing: 0.6rem;
+    text-transform: uppercase;
+}
+
+li a{
+    text-decoration: none;
+    color: var(--White);
+}
+#nav li a:hover{
+    background-color: var(--White);
+    color: var(--Dark-blue);
+    border-radius: 5rem;
+    font-family: 'Fraunces', serif;
+    text-align: center;
+    padding: 1rem;
+}
+h2{
+    text-align: start;
+    padding: 20px 0;
+    font-family: 'Fraunces', serif;
+}
+.testi h2{
+    text-align: center;
+}
+
+a{
+    text-decoration: var(--Yellow) 7px underline;
+    font-family: 'Fraunces', serif;
+    color: black;
+}
+p{
+    text-align: start;
+    color: var(--Very-dark-grayish-blue);
+}
+h3{
+    font-family: 'Fraunces', serif;
+    padding-top: 30%;
+}
+.card h3{
+    padding-top: 0;
+}
+.graphic-design p,.photography p{
+    padding: 1rem 8rem 0;
+}
+.card p{
+    height: 6rem;
+    padding: 2rem;
+    text-align: center;
+}
+h4{
+    color: var(--Dark-grayish-blue);
+}
+
+footer ul li a{
+    color: var(--Dark-desaturated-cyan);
+    padding: 1rem;
+}
+footer ul li a:hover{
+    color: white;
+    padding: 1rem;
+}
+
+/* =============== MAIN BELOW ================== */
+main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+
+main div, main img{
+    flex-basis: 50%;
+    height: 400px;
+    width: 50%;
+}
+
+.testi{
+    flex-basis: 100%;
+    padding: 40px;
+}
+
+.flex{
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.box{
+    padding: 3rem;
+    text-align: start;
+}
+
+
+
+
+
+
+
+
+
+/* ============== MAIN ABOVE ================= */
+footer .flex img{
+    width: 25%;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2rem;
+}
+footer{
+    background-color: var(--Dark-moderate-cyan);
+}
+footer .flex{
+    margin-bottom: 40px;
+}
+
+.socmed{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 75px;
+}
+.socmed a{
+    padding: 8px;
+    border-radius: 50%;
+}
+.socmed a:hover{
+    background-color:white;
+    
+}
+
+.attribution { margin-top: 100px;font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); font-size:inherit}
+
+@media screen and (max-width: 768px){
+    body{
+        max-width: 100%;
+    }
+    .img-mobile, #hamburger{
+        display: block;
+    }
+    .img-desktop{
+        display: none
+    }
+    #nav{
+        display: none;
+        position: fixed;
+        background-color: white;
+        z-index: 10;
+        flex-direction: column;
+        width: 50%;
+        margin-top: 60px;
+        padding: 50px;
+    }
+    #nav li a{
+        color: var(--Very-dark-desaturated-blue);
+    }
+    #nav li a:active{
+        background-color: yellow;
+    }
+    .h1-box{
+        height: 50vh;
+        flex-basis: 100vw;
+        background-image: url(images/desktop/image-header.jpg);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-attachment: scroll;
+        background-size: 100vh;
+    }
+    .graphic-design{
+        background-image: url(images/mobile/image-graphic-design.jpg);
+        background-size: 100vw;
+        background-position: center;
+    }
+    .graphic-design p,  .photography p{
+        padding: 1rem 3rem;
+    }
+    .photography{
+        background-image: url(images/mobile/image-photography.jpg);
+        background-position: center;
+        background-size: 100vw;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+    h3{
+        padding-top: 60%;
+    }
+    main div, main img{
+        flex-basis: 100%;
+        height: 400px;
+        width: 100%;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .box{
+        padding: 10vw;
+        width: 75vw;
+    }
+    .testi{
+        height: 1000px;
+    }
+    h4{
+        margin-bottom: 40px;
+    }
+    .img-mobile{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .img-mobile img{
+        max-width: 50%;
+    }
+    .logo{
+        margin-top: 50px;
+    }
+}
